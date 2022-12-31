@@ -11,16 +11,16 @@ $them-colors: (
   error: $error,
   c-blue: #1e1ee1,
   c-red: #f10505,
-  c-yellow: #EBD424,
-  c-green: #38B68A,
-  c-orange: #FFC943,
- c-purple: #E114A6,
+  c-yellow: #ebd424,
+  c-green: #38b68a,
+  c-orange: #ffc943,
+  c-purple: #e114a6,
   c-gray: #8c8888,
   c-gray2: #607d8b,
   c-black: #080808,
-  c-white: #ffffff
+  c-white: #ffffff,
 );
 
 @function them-colors($key) {
-  @return map-get($them-colors, $key );
+  @return map-get($them-colors, $key);
 }
