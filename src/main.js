@@ -11,37 +11,37 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const routes = {
     './calculator': async () => {
-      // load about page
+      // load calculator page
       let response = await fetch('/features/calculator/index.html');
       let html = await response.text();
       root.innerHTML = html;
-      await import('./features/calculator/main');
       await import('./features/calculator/style.scss');
+      await import('./features/calculator/main');
     },
 
     './password-generator': async () => {
-      // load the contact page
+      // load password-generator page
       let response = await fetch('/features/password-generator/index.html');
       let html = await response.text();
       root.innerHTML = html;
-      await import('./features/password-generator/main');
       await import('./features/password-generator/style.scss');
+      await import('./features/password-generator/main');
     },
     './currency-converter': async () => {
-      // load the contact page
+      // load currency-converter page
       let response = await fetch('/features/currency-converter/index.html');
       let html = await response.text();
       root.innerHTML = html;
-      await import('./features/currency-converter/main');
       await import('./features/currency-converter/style.scss');
+      await import('./features/currency-converter/main');
     },
     './unit-converter': async () => {
-      // load the contact page
+      // load unit-converter page
       let response = await fetch('/features/unit-converter/index.html');
       let html = await response.text();
       root.innerHTML = html;
-      await import('./features/unit-converter/main');
       await import('./features/unit-converter/style.scss');
+      await import('./features/unit-converter/main');
     },
   };
 
