@@ -1,102 +1,103 @@
-@import 'variables';
 
-body{
-    background-image: linear-gradient(to bottom right, them-colors(primary),them-colors(secondary));
-
-}
-.bt-number{
-  background-color: them-colors(c-yellow);
-}
-.container {
-    width: 400px;
-    padding: 20px;
-    border-radius: 10px;
-    margin: 15% auto;
-    box-shadow: 0 0 30px them-colors(c-black);
-    position: relative;
-    .theme-toggler{
-        position: absolute;
-        top: 2px;
-        left: 4px;
-        color: #fff;
-        cursor: pointer;
-        z-index: 1;
-        &.active{
-         color: #333;
-        }
-        &.active::before{
-            background-color: #fff;
-           }
-           &::before{
-            content: '';
-            position: absolute;
-            height: 30px;
-            width: 30px;
-            top: 50%;
-            transform: translate(-50%,-50%);
-            border-radius: 50%;
-            background-color:#333 ;
-            z-index: -1;
-           }
-    }
-
-    form {
-        margin: 1px auto;
-        /* display: block; */
-        width: 100%;
-        .result {
-            margin-bottom: 5px;
-            display: flex;
-            gap: 7px;
-            input[type="button"] {
-                padding: 10px 34px;
-                font-size: 20px;
-                font-weight: bold;
-                border-radius: 30px;
-                border: 1px solid #ddd;
-                height: 88px;
-                cursor: pointer;
-                transition: all 200ms ease;
-                margin-bottom: 10px;
-                background-color: them-colors(c-gray2);
-                color: them-colors(c-white);
-                &:hover{
-                    transform: scale(1.1);
-                }
-              }
-              input[type="text"] {
-                padding: 12px;
-                border: 1px solid #715124;
-                outline: none;
-                background-color: transparent;
-                // color: #fff;
-                font-size:30px;
-                font-weight: bold;
-                width: 100%;
-                border: none;
-
-              }
-          }
-          .digits {
-            display: grid;
-            gap: 20px;
-            grid-template-columns: repeat(4, 1fr);
-            .bt-oprator{ background-color: them-colors(c-green);}
-            }
-          .digits input[type="button"] {
-            padding: 7px 10px;
-            font-size: 20px;
-            font-weight: bold;
-            border-radius: 30px;
-            height: 90px;
-            cursor: pointer;
-            border: 1px solid #ddd;
-
-            transition: all 200ms ease;
-             &:hover{
-                transform: scale(1.1);
-                }
-          }
-      }
+  @import 'variables';
+  body{
+      background-image: linear-gradient(to bottom right, them-colors(primary),them-colors(secondary));
+  
   }
-
+  .bt-number{
+    background-color: them-colors(c-yellow);
+  }
+  .container {
+      width: 400px;
+      padding: 20px;
+      border-radius: 10px;
+      margin: 15% auto;
+      box-shadow: 0 0 30px them-colors(c-black);
+      position: relative;
+      .theme-toggler{
+          position: absolute;
+          top: 2px;
+          left: 4px;
+          color: #fff;
+          cursor: pointer;
+          z-index: 1;
+          &.active{
+           color: #333;
+          }
+          &.active::before{
+              background-color: #fff;
+             }
+             &::before{
+              content: '';
+              position: absolute;
+              height: 30px;
+              width: 30px;
+              top: 50%;
+              transform: translate(-50%,-50%);
+              border-radius: 50%;
+              background-color:#333 ;
+              z-index: -1;
+             }
+      }
+  
+      form {
+          margin: 1px auto;
+          /* display: block; */
+          width: 100%;
+          .result {
+              margin-bottom: 5px;
+              display: flex;
+              gap: 7px;
+              input[type="button"] {
+                  padding: 10px 34px;
+                  font-size: 20px;
+                  font-weight: bold;
+                  border-radius: 30px;
+                  border: 1px solid #ddd;
+                  height: 88px;
+                  cursor: pointer;
+                  transition: all 200ms ease;
+                  margin-bottom: 10px;
+                  background-color: them-colors(c-gray2);
+                  color: them-colors(c-white);
+                  &:hover{
+                      transform: scale(1.1);
+                  }
+                }
+                input[type="text"] {
+                  padding: 12px;
+                  border: 1px solid #715124;
+                  outline: none;
+                  background-color: transparent;
+                  // color: #fff;
+                  font-size:30px;
+                  font-weight: bold;
+                  width: 100%;
+                  border: none;
+  
+                }
+            }
+            .digits {
+              display: grid;
+              gap: 20px;
+              grid-template-columns: repeat(4, 1fr);
+              .bt-oprator{ background-color: them-colors(c-green);}
+              }
+            .digits input[type="button"] {
+              padding: 7px 10px;
+              font-size: 20px;
+              font-weight: bold;
+              border-radius: 30px;
+              height: 90px;
+              cursor: pointer;
+              border: 1px solid #ddd;
+              position: relative;
+              transition: all 200ms ease;
+               &:hover{
+                  transform: scale(1.1);
+                  }
+            }
+  
+        }
+    }
+  

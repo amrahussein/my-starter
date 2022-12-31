@@ -1,25 +1,16 @@
 console.log('js');
 
 //
-
-// let enterDigits = (val) => {
-//   console.log('Hello');
-//   document.getElementById('result').value += val;
-//   return val;
-// };
-
-let digits = document.getElementById('digits');
+let digits = document.querySelector('.digits');
 digits.addEventListener('click', (e) => {
-  console.log(e.target);
-  console.log(e.target.value);
-  console.log(e.currentTarget);
+  console.log('hello');
   let currentDigit = e.target.value;
   document.getElementById('result').value += currentDigit;
 });
 
 //sum
 let sum = () => {
-  // console.log('Hello');
+  console.log('Hello');
   let x = document.getElementById('result').value;
   let y = eval(x);
   let result = (document.getElementById('result').value = y);
@@ -28,7 +19,7 @@ let sum = () => {
 };
 
 let clearScreen = () => {
-  // console.log('Hello');
+  console.log('Hello');
   document.getElementById('result').value = '';
 };
 
