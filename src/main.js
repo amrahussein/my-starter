@@ -52,7 +52,10 @@ document.addEventListener('DOMContentLoaded', () => {
     routes[currentUrl]();
   };
 
-  const handleLinkClick = (event) => {
+  const navigation = document.getElementById('nav');
+  console.log('navigation: ', navigation);
+
+  navigation.addEventListener('click', (event) => {
     event.preventDefault();
     // get the clicked link's URL
     const clickedUrl = event.target.getAttribute('href');
@@ -65,14 +68,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (routes.hasOwnProperty(clickedUrl)) {
       // invoke the route handler for the clicked URL
       routes[clickedUrl]();
-    } else {
-      // handle the case where there is no matching route
-      console.error(`No route found for ${clickedUrl}`);
+      return;
     }
-  };
-
-  // add event listeners to all links in the app
-  document.querySelectorAll('.nav-item').forEach((link) => {
-    link.addEventListener('click', handleLinkClick);
+    // handle the case where there is no matching route
+    console.error('Paged Not Found');
   });
 });
