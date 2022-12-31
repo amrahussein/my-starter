@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   // add event listeners to all links in the app
-  document.querySelectorAll('.btn').forEach((link) => {
+  document.querySelectorAll('.nav-item').forEach((link) => {
     link.addEventListener('click', handleLinkClick);
   });
 });
