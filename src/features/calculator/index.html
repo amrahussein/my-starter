@@ -8,8 +8,36 @@
     <title>Calculator</title>
   </head>
   <body>
-    Hello calculator
-    <button id="btn">say hello</button>
-    <script src="./main"></script>
+    <div class="container dark">        
+      <!-- <div class="theme-toggler active">
+          <i class="toggler-icon"></i>
+      </div> -->
+  <form action="">
+    <div class="result">
+      <input type="text" id="result" />
+      <input id="clear" class=" bt-oprator" type="button" value="C"  onclick="clearScreen()"/>
+    </div>
+    <div class="degit">
+      <input id="7" class=" bt-number" type="button"  value="7" onclick="enterDig('7')"/>
+      <input id="8" class=" bt-number" type="button"  value="8" onclick="enterDig('8')"/>
+      <input id="9" class=" bt-number" type="button"  value="9" onclick="enterDig('9')"/>
+      <input id="/" class=" bt-oprator" type="button" value="/" onclick="enterDig('/')"/>
+      <input id="4" class=" bt-number" type="button"  value="4"  onclick="enterDig('4')"/>
+      <input id="5" class=" bt-number" type="button"  value="5"  onclick="enterDig('5')"/>
+      <input id="6" class=" bt-number" type="button"  value="6"  onclick="enterDig('6')"/>
+      <input id="-" class=" bt-oprator" type="button" value="-" onclick="enterDig('-')"/>
+      <input id="1" class=" bt-number" type="button"   value="1"  onclick="enterDig('1')"/>
+      <input id="2" class=" bt-number" type="button"   value="2"  onclick="enterDig('2')"/>
+      <input id="3" class=" bt-number" type="button"   value="3"  onclick="enterDig('3')"/>
+      <input id="*" class=" bt-oprator" type="button"  id="" value="*" onclick="enterDig('*')"/>
+      <input id="0" class=" bt-number" type="button"   value="0" onclick="enterDig('0')"/>
+      <input id="." class=" bt-oprator" type="button"   value="." onclick="enterDig('.')"/>
+      <input id="+" class=" bt-oprator" type="button"  value="+" onclick="enterDig('+')"/>
+      <input id="=" class=" bt-oprator equal" type="button"  value="=" onclick="sum('=')"/>
+    </div>
+  </form>
+</div>
+    <!-- <button id="btn">say hello</button> -->
+    <script src="./script.js"></script>
   </body>
 </html>
