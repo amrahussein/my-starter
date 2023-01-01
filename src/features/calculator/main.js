@@ -1,5 +1,3 @@
-console.log('js');
-
 //
 let digits = document.querySelector('.digits');
 digits.addEventListener('click', (e) => {
