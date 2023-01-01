@@ -5,21 +5,36 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
+    <link rel="stylesheet" href="./style.scss" />
   </head>
   <body>
     <div id="app">
-     <nav>
-      <ul>
-        <div id="nav">
-          <li class="nav-item" id="calculator"><a href="./calculator">Calculator</a></li>
-          <li class="nav-item" id="password-generator"><a href="./password-generator">Password Generator</a></li>
-          <li class="nav-item" id="currency-converter"><a href="./currency-converter">Currency Converter</a></li>
-          <li class="nav-item" id="unit-converter"><a href="./unit-converter">Unit Converter</a></li>
-        </div>
-      </ul>
-     </nav>
+      <div class="container">
+        <div class="logo">My <span class="lo-go">Master</span></div>
+        <nav>
+          <ul class="links" id="nav">
+            <li class="nav-item active" id="calculator">
+              <a href="./calculator">Calculator</a>
+            </li>
+            <li class="nav-item" id="password-generator">
+              <a href="./password-generator">Password Generator</a>
+            </li>
+            <li class="nav-item" id="currency-converter">
+              <a href="./currency-converter">Currency Converter</a>
+            </li>
+            <li class="nav-item" id="unit-converter">
+              <a href="./unit-converter">Unit Converter</a>
+            </li>
+          </ul>
+        </nav>
+        <button class="toggle-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </div>
     <script type="module" src="./main"></script>
-   
+    <script type="module" src="./landing.js"></script>
   </body>
 </html>

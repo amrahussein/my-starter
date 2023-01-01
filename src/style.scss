@@ -1,7 +1,10 @@
-// * {
-//     background-color: lightblue;
-// }
 
-main {
-  margin-top: 2rem;
+@import 'normalize';
+@import 'variables';
+@import 'framework';
+@import 'nav';
+
+body {
+  background-image: linear-gradient(to bottom right, #4caf50, #03a9f4);
+
 }

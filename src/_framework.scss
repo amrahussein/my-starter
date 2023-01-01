@@ -1,0 +1,53 @@
+// Start global
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.container {
+  // margin: auto;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+// End global
+// Start ==> media
+
+// meadia hide mobil
+@media (max-width: 576px) {
+  .hide-mobile {
+    display: none !important;
+  }
+}
+@media (max-width: 768px) {
+  .hide-tablet {
+    display: none !important;
+  }
+}
+.button-mobile {
+  @media (max-width: 576px) {
+    margin: 1px auto;
+    width: 100%;
+  }
+}
+.txt-c-mobile {
+  @media (max-width: 576px) {
+    text-align: center;
+  }
+}
+// End ==> media
+// start componantes
+.between-flex {
+  align-items: center;
+  justify-content: space-between;
+}
+.align-center {
+  align-items: center;
+  justify-content: center;
+}
+.dir-column {
+  flex-direction: column;
+}
+.grid {
+  display: grid;
+}

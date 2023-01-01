@@ -1,0 +1,96 @@
+#app {
+  .container {
+    display: flex;
+    align-items: center;
+    background: #110b0b;
+    justify-content: space-between;
+    .logo{
+      color: #fff;
+      .lo-go{
+        color: theme-colors(secondary);
+      }
+    }
+    .links {
+      display: flex;
+      color: #fff;
+      gap: 10px;
+      position: relative;
+      padding-left: 0;
+      overflow: hidden;
+      .nav-item {
+        padding: 10px;
+        border: 1px solid transparent; 
+        transition: 0.3s;
+        a {
+          color: #fff;
+          &:hover {
+            color: theme-colors(secondary);
+          }
+        }
+        &:hover{
+          border: 1px solid #fff; 
+
+        }
+      }
+      li.active {
+        a {
+          color: theme-colors(secondary);
+        }
+      }
+      @media (max-width: 768px) {
+        display: none;
+      }
+      &.open {
+        position: relative;
+        @media (max-width: 768px) {
+          display: block;
+          background-color: #fff;
+          padding: 20;
+          position: absolute;
+          left: 0;
+          top: 42px;
+          border-radius: 20px;
+          width: 100%;
+          transition: 0.3s;
+        }
+      }
+      &.open li a {
+        @media (max-width: 768px) {
+          color: black;
+          font-weight: bold;
+          &:hover {
+            color: var(--bs-main);
+          }
+        }
+      }
+    }
+    .toggle-menu {
+      position: relative;
+      display: none;
+      border: none;
+      background: none;
+      width: 40px;
+      cursor: pointer;
+      margin-top: 1.5em;
+      span {
+        display: block;
+        background: #fff;
+        height: 3px;
+        margin-bottom: 4px;
+      }
+      @media (max-width: 768px) {
+        display: block;
+      }
+      &.menu-active::after {
+        content: '';
+        border-width: 10px;
+        position: absolute;
+        border-width: 10px;
+        border-style: solid;
+        bottom: -11px;
+        left: 9px;
+        border-color: transparent transparent #fff transparent;
+      }
+    }
+  }
+}

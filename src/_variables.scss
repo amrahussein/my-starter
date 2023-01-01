@@ -1,0 +1,26 @@
+/*
+colors
+*/
+$primary: #326dee;
+$secondary: #1ac888;
+$error: #d32752;
+
+$theme-colors: (
+  primary: $primary,
+  secondary: $secondary,
+  error: $error,
+  c-blue: #1e1ee1,
+  c-red: #f10505,
+  c-yellow: #ebd424,
+  c-green: #38b68a,
+  c-orange: #ffc943,
+  c-purple: #e114a6,
+  c-gray: #8c8888,
+  c-gray2: #607d8b,
+  c-black: #080808,
+  c-white: #ffffff,
+);
+
+@function theme-colors($key) {
+  @return map-get($theme-colors, $key);
+}
