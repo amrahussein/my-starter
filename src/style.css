@@ -71,7 +71,7 @@ figure {
  */
 hr {
   -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+  box-sizing: content-box;
   /* 1 */
   height: 0;
   /* 1 */
@@ -113,7 +113,7 @@ abbr[title] {
   text-decoration: underline;
   /* 2 */
   -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted;
   /* 2 */
 }
 
@@ -267,9 +267,9 @@ select {
  * 2. Correct the inability to style clickable types in iOS and Safari.
  */
 button,
-html [type="button"],
-[type="reset"],
-[type="submit"] {
+html [type='button'],
+[type='reset'],
+[type='submit'] {
   -webkit-appearance: button;
   /* 2 */
 }
@@ -278,9 +278,9 @@ html [type="button"],
  * Remove the inner border and padding in Firefox.
  */
 button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
+[type='button']::-moz-focus-inner,
+[type='reset']::-moz-focus-inner,
+[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
@@ -289,9 +289,9 @@ button::-moz-focus-inner,
  * Restore the focus styles unset by the previous rule.
  */
 button:-moz-focusring,
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
+[type='button']:-moz-focusring,
+[type='reset']:-moz-focusring,
+[type='submit']:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
@@ -310,7 +310,7 @@ fieldset {
  */
 legend {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   /* 1 */
   color: inherit;
   /* 2 */
@@ -346,10 +346,10 @@ textarea {
  * 1. Add the correct box sizing in IE 10-.
  * 2. Remove the padding in IE 10-.
  */
-[type="checkbox"],
-[type="radio"] {
+[type='checkbox'],
+[type='radio'] {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   /* 1 */
   padding: 0;
   /* 2 */
@@ -358,8 +358,8 @@ textarea {
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
+[type='number']::-webkit-inner-spin-button,
+[type='number']::-webkit-outer-spin-button {
   height: auto;
 }
 
@@ -367,7 +367,7 @@ textarea {
  * 1. Correct the odd appearance in Chrome and Safari.
  * 2. Correct the outline style in Safari.
  */
-[type="search"] {
+[type='search'] {
   -webkit-appearance: textfield;
   /* 1 */
   outline-offset: -2px;
@@ -377,8 +377,8 @@ textarea {
 /**
  * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
  */
-[type="search"]::-webkit-search-cancel-button,
-[type="search"]::-webkit-search-decoration {
+[type='search']::-webkit-search-cancel-button,
+[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -479,27 +479,27 @@ a {
 
 .between-flex {
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .align-center {
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .dir-column {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .grid {
@@ -512,12 +512,18 @@ a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   background: #110b0b;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  #app .container {
+    padding: 15px 20px;
+  }
 }
 
 #app .container .logo {
@@ -544,18 +550,17 @@ a {
   border: 1px solid transparent;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  border-radius: 3px;
 }
 
 #app .container .links .nav-item a {
   color: #fff;
 }
 
-#app .container .links .nav-item a:hover {
-  color: #1ac888;
-}
-
 #app .container .links .nav-item:hover {
   border: 1px solid #fff;
+  color: #ffffff;
+  background-color: #e114a6;
 }
 
 #app .container .links li.active a {
@@ -575,25 +580,26 @@ a {
 @media (max-width: 768px) {
   #app .container .links.open {
     display: block;
-    background-color: #fff;
+    background-color: #110b0b;
     padding: 20;
     position: absolute;
-    left: 0;
-    top: 42px;
-    border-radius: 20px;
-    width: 100%;
+    right: 0px;
+    top: 34px;
+    border-radius: 4px;
+    width: calc(100% - 2px);
     -webkit-transition: 0.3s;
     transition: 0.3s;
+    border: 1px solid #ddd;
   }
 }
 
 @media (max-width: 768px) {
   #app .container .links.open li a {
-    color: black;
+    color: white;
     font-weight: bold;
   }
   #app .container .links.open li a:hover {
-    color: var(--bs-main);
+    color: #ffffff;
   }
 }
 
@@ -604,7 +610,6 @@ a {
   background: none;
   width: 40px;
   cursor: pointer;
-  margin-top: 1.5em;
 }
 
 #app .container .toggle-menu span {
@@ -632,7 +637,13 @@ a {
 }
 
 body {
-  background-image: -webkit-gradient(linear, left top, right bottom, from(#4caf50), to(#03a9f4));
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right bottom,
+    from(#4caf50),
+    to(#03a9f4)
+  );
   background-image: linear-gradient(to bottom right, #4caf50, #03a9f4);
 }
 /*# sourceMappingURL=style.css.map */

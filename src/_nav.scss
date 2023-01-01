@@ -4,9 +4,12 @@
     align-items: center;
     background: #110b0b;
     justify-content: space-between;
-    .logo{
+    @media (max-width: 768px) {
+      padding: 15px 20px;
+    }
+    .logo {
       color: #fff;
-      .lo-go{
+      .lo-go {
         color: theme-colors(secondary);
       }
     }
@@ -19,17 +22,19 @@
       overflow: hidden;
       .nav-item {
         padding: 10px;
-        border: 1px solid transparent; 
+        border: 1px solid transparent;
         transition: 0.3s;
+        border-radius: 3px;
         a {
           color: #fff;
           &:hover {
-            color: theme-colors(secondary);
+            // color: theme-colors(secondary);
           }
         }
-        &:hover{
-          border: 1px solid #fff; 
-
+        &:hover {
+          border: 1px solid #fff;
+          color: theme-colors(c-white);
+          background-color: theme-colors(c-purple);
         }
       }
       li.active {
@@ -44,22 +49,24 @@
         position: relative;
         @media (max-width: 768px) {
           display: block;
-          background-color: #fff;
+          background-color: #110b0b;
           padding: 20;
           position: absolute;
-          left: 0;
-          top: 42px;
-          border-radius: 20px;
-          width: 100%;
+          right: 0px;
+          top: 34px;
+          border-radius: 4px;
+          width: calc(100% - 2px);
           transition: 0.3s;
+          border: 1px solid #ddd;
         }
       }
       &.open li a {
         @media (max-width: 768px) {
-          color: black;
+          color: rgb(255, 255, 255);
           font-weight: bold;
           &:hover {
-            color: var(--bs-main);
+            color: theme-colors(c-white);
+            // background-color: theme-colors(c-purple);
           }
         }
       }
@@ -71,7 +78,7 @@
       background: none;
       width: 40px;
       cursor: pointer;
-      margin-top: 1.5em;
+      // margin-top: 1.5em;
       span {
         display: block;
         background: #fff;
