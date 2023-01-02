@@ -7,14 +7,14 @@ body {
   font-family: 'Muli', sans-serif;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   padding: 10px;
   min-height: 100vh;
 }
@@ -26,7 +26,7 @@ p {
 .container {
   background-color: #585858;
   -webkit-box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.664);
-          box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.664);
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.664);
   padding: 20px;
   width: 350px;
   max-width: 100%;
@@ -46,11 +46,11 @@ p {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   position: relative;
   font-size: 18px;
   font-weight: bold;
@@ -81,7 +81,7 @@ p {
 
 .container .result-container .btn-icon:hover {
   -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .container .settings .setting {
@@ -89,11 +89,11 @@ p {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin: 15px 0;
 }
 
