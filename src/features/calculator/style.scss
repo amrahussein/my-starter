@@ -16,7 +16,7 @@ body {
   margin: 8% auto;
   box-shadow: 0 0 30px them-colors(c-black);
   position: relative;
-  @media (max-width:576px) {
+  @media (max-width: 576px) {
     width: auto;
     margin-left: 10px;
     margin-right: 10px;
@@ -93,7 +93,8 @@ body {
         background-color: them-colors(c-green);
       }
     }
-    .digits input[type='button'],button {
+    .digits input[type='button'],
+    button {
       padding: 7px 10px;
       font-size: 20px;
       font-weight: bold;

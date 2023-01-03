@@ -1,0 +1,148 @@
+
+  // dark mode 
+  /* .dark-mode {
+  filter: invert(100%);
+  img {
+    filter: invert(100%);
+  }
+  .landing-page {
+    filter: invert(100%);
+  }
+  } */
+  //dark mode
+  .todo-container {
+    width: 600px;
+    margin: 30px auto 0;
+    background-color: #f6f6f6;
+    h3{
+        text-align: center;
+        padding: 10px;  
+    }
+    .add-task{
+      padding: 15px;
+      background-color: #009688;
+      position: relative;
+      display: flex;
+      input{
+        -webkit-box-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px 10px 10px 5px;
+        background-color: rgba(255, 255, 255, 0.3);
+        color: #fff;
+        font-size: 20px;
+        &:focus {
+          outline: none;
+  
+        }
+      }
+      .plus {
+        position: absolute;
+        height: 43px;
+        width: 43px;
+        line-height: 43px;
+        border-radius: 50%;
+        font-weight: bold;
+        right: 9px;
+        /* margin-top: 10px; */
+        /* margin-left: 10px; */
+        font-size: 38px;
+        cursor: pointer;
+        background-color: #f6f6f6;
+        color: #810101;
+        text-align: center;
+        transition: transform .3s ;
+        &:hover {
+          transform: rotate(90deg);
+        }
+      }
+    }
+    .tasks-content {
+      padding: 15px;
+      .no-tasks-message{
+        color: #777;
+        font-size: 15px;
+      }
+      >span {
+        display: block;
+        background-color: #fff;
+        padding: 10px;
+        &:not(:last-child) {
+          margin-bottom: 10px;
+        }
+      }
+  
+      .task-box {
+  
+        .delete {
+          float: right;
+          background-color: #e91e63;
+          padding: 4px 10px;
+          color: #fff;
+          border-radius: 5px;
+          font-size: 11px;
+          font-weight: bold;
+          cursor: pointer;
+        }
+        &.finished {
+          text-decoration: line-through;
+        }
+      }
+    }
+  
+  }
+  
+  /*Task Satas*/
+  .task-stats {
+    display: flex;
+    margin: 10px auto;
+    width: 600px;
+    font-size: 12px;
+    .tasks-count{
+      flex: 1;
+      padding: 10px;
+      span{
+        color: #fff;
+        padding: 1px 5px;
+        font-size: 10px;
+        border-radius: 4px;
+        font-weight: bold;
+        background-color: #e91e63;
+      }
+    }
+    .tasks-completed{
+      padding: 10px;
+      span{
+        color: #fff;
+        padding: 1px 5px;
+        font-size: 10px;
+        background-color: #03a8f4;
+      }
+    }
+  
+  }
+  /*Frame work*/
+  .clearfix {
+    clear: both;
+  }
+  
+  /*Stat Grid System*/
+  
+  @media (max-width: 576px){ /* Small Devises => lanscape phonse*/
+  
+  }
+  
+  @media (max-width: 768px){ /* medium Devises => Tablets*/
+  
+  }
+  
+  @media (max-width: 992px){ /* pc Devises*/
+  
+  }
+  
+  @media (max-width: 1200px){ /* larg screens */
+  
+  }
+  /*End Grid System*/

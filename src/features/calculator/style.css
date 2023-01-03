@@ -2,7 +2,13 @@
 colors
 */
 body {
-  background-image: -webkit-gradient(linear, left top, right bottom, from(#326dee), to(#1ac888));
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right bottom,
+    from(#326dee),
+    to(#1ac888)
+  );
   background-image: linear-gradient(to bottom right, #326dee, #1ac888);
 }
 
@@ -16,7 +22,7 @@ body {
   border-radius: 10px;
   margin: 8% auto;
   -webkit-box-shadow: 0 0 30px #080808;
-          box-shadow: 0 0 30px #080808;
+  box-shadow: 0 0 30px #080808;
   position: relative;
 }
 
@@ -54,7 +60,7 @@ body {
   width: 30px;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   border-radius: 50%;
   background-color: #333;
   z-index: -1;
@@ -91,7 +97,7 @@ body {
 
 .container form .result input[type='button']:hover {
   -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .container form .result input[type='text'] {
@@ -109,15 +115,16 @@ body {
   display: -ms-grid;
   display: grid;
   gap: 20px;
-  -ms-grid-columns: (1fr)[4];
-      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-columns: (1fr) [4];
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .container form .digits .bt-oprator {
   background-color: #38b68a;
 }
 
-.container form .digits input[type='button'], .container form button {
+.container form .digits input[type='button'],
+.container form button {
   padding: 7px 10px;
   font-size: 20px;
   font-weight: bold;
@@ -130,8 +137,9 @@ body {
   transition: all 200ms ease;
 }
 
-.container form .digits input[type='button']:hover, .container form button:hover {
+.container form .digits input[type='button']:hover,
+.container form button:hover {
   -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  transform: scale(1.1);
 }
 /*# sourceMappingURL=style.css.map */

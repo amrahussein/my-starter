@@ -34,3 +34,92 @@ document.addEventListener('click', (e) => {
 myLinks.onclick = function (e) {
   e.stopPropagation();
 };
+
+/*To Do List */
+/*
+tasks:
+[1] use sweet Alert If Input Empty  {done}
+[2] check is typed the same task
+
+*/
+// seting Up Var
+let theInput = document.querySelector('.add-task input'),
+  theAddBtn = document.querySelector('.add-task .plus'),
+  tasksContainer = document.querySelector('.tasks-content'),
+  noTaskMsg = document.querySelector('.no-tasks-message'),
+  tasksCount = document.querySelector('.tasks-count span'),
+  tasksCompleted = document.querySelector('.tasks-completed span');
+
+// foucas on input field
+
+window.onload = function () {
+  theInput.focus();
+};
+
+// add new Task
+
+theAddBtn.onclick = function () {
+  // if input is Empty
+  if (theInput.value === '') {
+    swal({
+      title: 'Fields Empty !',
+      text: 'Please check the missing field!',
+      icon: 'warning',
+    });
+  } else {
+    // remove NO Tasks Message
+    noTaskMsg.remove();
+
+    // creat main span element
+    let mainSpan = document.createElement('span');
+
+    //Creat delete button
+    let deletbtn = document.createElement('button');
+
+    // Creat the main Span Text
+
+    let text = document.createTextNode(theInput.value);
+
+    // Creat the Delete Delete Button
+
+    let delettext = document.createTextNode('delete');
+
+    // add text to main span
+    mainSpan.appendChild(text);
+
+    // add class to mains span
+
+    mainSpan.className = 'task-box';
+
+    // add text to delete Button
+
+    deletbtn.appendChild(delettext);
+
+    // add class to delete btn
+
+    deletbtn.className = 'delete';
+
+    // add delete button to main span
+
+    mainSpan.appendChild(deletbtn);
+
+    // Add the task to contaner
+
+    tasksContainer.appendChild(mainSpan);
+
+    // clear the inpute
+    theInput.value = '';
+
+    // Focus On Field
+
+    theInput.focus();
+  }
+};
+
+document.addEventListener('click', (e) => {
+  // Delete Task
+  if (e.target.className == 'delete') {
+    // remove curent task
+    e.target.parentNode.remove();
+  }
+});
