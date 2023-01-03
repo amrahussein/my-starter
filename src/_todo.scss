@@ -3,7 +3,9 @@
     width: 600px;
     margin: 30px auto 0;
     background-color: #f6f6f6;
-   
+    @media (max-width:576px) {
+      width: 100%;
+  }
     .add-task{
       padding: 15px;
       background-color: #009688;

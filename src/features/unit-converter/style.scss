@@ -18,24 +18,80 @@
     text-align: center !important;
     font-size: 5.5rem;
     line-height: 1.2;
+            @media (max-width:576px) {
+                font-size: 40px;
+        }
   }
 
 .main{
+    width: 100%;
     .units{
+        @media (max-width:576px) {
+            width: 100%;
+                margin-top: 10em;
+        }
         display: flex;
         flex-direction: column;
-        /* width: 500px; */
-        /* justify-content: center; */
+        width: 500px;
+        justify-content: center;
         margin: 10px auto;
-        background-color: azure;
         padding: 20px;
         background-color: rgb(21, 153, 153);
         select{
-            width: 500px;
-            margin: 1px auto; 
+            width: 100%;
+            margin: 1px auto;
+            padding: 9px;
+            border: none;
+            border-radius: 3px;
         }
         label{
             text-align: start;
+            color: #fff;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .resul{
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            gap: 5px;
+            .number{
+                width: 100%;
+                border: none;  
+                    border-radius: 5px;
+
+            }
+            button{
+                display: inline-block;
+                text-align: center;
+                vertical-align: middle;
+                font-weight: 400;
+                font-size: 1.2rem;
+                line-height: 1.5;
+                width: 200px;
+                user-select: none;
+                color: white;
+                background-color: #0070ff;
+                border-color: #0070ff;
+                border: 1px solid transparent;
+                border-radius: 0.25rem;
+                padding: 0.375rem 0.75rem; 
+                transition: 0.3s;
+            }
         }
       }
+
+}
+
+#res{
+    color: #fff;
+    text-align: center;
+    font-size: 26px;
+    background-color: black;
+    border-radius: 5px;
+        width: 400px;
+    margin: 1px auto;
+    @media (max-width:576px) {
+        width: 100%;
+    }
 }

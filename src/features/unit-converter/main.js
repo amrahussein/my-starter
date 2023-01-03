@@ -89,7 +89,7 @@ function Conversion() {
     return;
   }
 
-  alert('Please Select The two fields with valid units');
+  // alert('Please Select The two fields with valid units');
   // else {
   // }
 }
