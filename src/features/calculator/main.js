@@ -1,26 +1,47 @@
 //
-let digits = document.querySelector('.digits');
-digits.addEventListener('click', (e) => {
-  console.log('hello');
-  let currentDigit = e.target.value;
-  document.getElementById('result').value += currentDigit;
-});
+// let digits = document.querySelector('.digits');
+// digits.addEventListener('click', (e) => {
+//   console.log('hello');
+//   let currentDigit = e.target.value;
+//   document.getElementById('result').value += currentDigit;
 
-//sum
-let sum = () => {
-  console.log('Hello');
+// });
+
+/*
+  for (let i = 0; i > AllDigits.length; i++) {
+    if (AllDigits[i] != '') {
+      console.log('hello');
+    }
+  }
+  return AllDigits[i];
+  */
+
+// clear input after sum any logic
+let AllDigits = document.querySelector('.digits');
+AllDigits.onclick = function (e) {
+  // console.log('hello here');
+  let currentDigit = e.target.value;
+  if (currentDigit != '') {
+    document.getElementById('result').value += currentDigit;
+    console.log('hello here');
+  } else {
+    document.getElementById('result').value = '';
+  }
+};
+
+//operation
+let operation = () => {
+  // console.log('Hello');
   let x = document.getElementById('result').value;
   let y = eval(x);
-  let result = (document.getElementById('result').value = y);
-  //   console.log(y);
+  let result = (x = y);
   return result;
 };
 
 let clearScreen = () => {
-  console.log('Hello');
   document.getElementById('result').value = '';
 };
 
 // window.enterDigits = enterDigits;
-window.sum = sum;
+window.operation = operation;
 window.clearScreen = clearScreen;
