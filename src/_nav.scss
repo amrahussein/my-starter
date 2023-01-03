@@ -58,6 +58,7 @@
           width: calc(100% - 2px);
           transition: 0.3s;
           border: 1px solid #ddd;
+          z-index: 111;
         }
       }
       &.open li a {

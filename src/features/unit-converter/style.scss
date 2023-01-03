@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: rgb(21, 143, 143);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .heading {
+    font-family: 'Amiri', serif;
+    font-family: 'Roboto Mono', monospace;
+    margin: 35px auto 20px;
+    font-weight: 900;
+    display: block;
+    text-align: center !important;
+    font-size: 5.5rem;
+    line-height: 1.2;
+  }
+
+.main{
+    .units{
+        display: flex;
+        flex-direction: column;
+        /* width: 500px; */
+        /* justify-content: center; */
+        margin: 10px auto;
+        background-color: azure;
+        padding: 20px;
+        background-color: rgb(21, 153, 153);
+        select{
+            width: 500px;
+            margin: 1px auto; 
+        }
+        label{
+            text-align: start;
+        }
+      }
+}

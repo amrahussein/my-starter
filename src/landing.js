@@ -35,7 +35,7 @@ myLinks.onclick = function (e) {
   e.stopPropagation();
 };
 
-/*To Do List */
+/*===================================To Do List ================================= */
 // set Up Var
 let theInput = document.querySelector('.add-task input'),
   theAddBtn = document.querySelector('.add-task .plus'),
