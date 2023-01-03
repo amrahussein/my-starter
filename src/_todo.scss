@@ -14,49 +14,32 @@
     width: 600px;
     margin: 30px auto 0;
     background-color: #f6f6f6;
-    h3{
-        text-align: center;
-        padding: 10px;  
-    }
+   
     .add-task{
       padding: 15px;
       background-color: #009688;
       position: relative;
       display: flex;
+      gap: 10px;
       input{
         -webkit-box-flex: 1;
         -ms-flex: 1;
         flex: 1;
         padding: 10px 15px;
         border: none;
-        border-radius: 5px 10px 10px 5px;
-        background-color: rgba(255, 255, 255, 0.3);
-        color: #fff;
+        border-radius: 5px;
+        background-color: #fff;
+      
         font-size: 20px;
         &:focus {
           outline: none;
-  
         }
       }
-      .plus {
-        position: absolute;
-        height: 43px;
-        width: 43px;
-        line-height: 43px;
-        border-radius: 50%;
-        font-weight: bold;
-        right: 9px;
-        /* margin-top: 10px; */
-        /* margin-left: 10px; */
-        font-size: 38px;
-        cursor: pointer;
-        background-color: #f6f6f6;
-        color: #810101;
-        text-align: center;
-        transition: transform .3s ;
-        &:hover {
-          transform: rotate(90deg);
-        }
+      button{
+        border: none;
+        border-radius: 7px;
+        background-color: #16c888;
+        color: #fff;
       }
     }
     .tasks-content {
@@ -66,25 +49,26 @@
         font-size: 15px;
       }
       >span {
-        display: block;
+        display: flex;
         background-color: #fff;
         padding: 10px;
+        justify-content: space-between;
+        align-items: center;
         &:not(:last-child) {
           margin-bottom: 10px;
         }
       }
   
       .task-box {
-  
         .delete {
-          float: right;
-          background-color: #e91e63;
-          padding: 4px 10px;
-          color: #fff;
-          border-radius: 5px;
-          font-size: 11px;
-          font-weight: bold;
-          cursor: pointer;
+            background-color: #e114a6;
+            padding: 8px 17px;
+            color: #fff;
+            border-radius: 5px;
+            border: navajowhite;
+            font-size: 12px;
+            font-weight: bold;
+            cursor: pointer;
         }
         &.finished {
           text-decoration: line-through;
@@ -94,35 +78,6 @@
   
   }
   
-  /*Task Satas*/
-  .task-stats {
-    display: flex;
-    margin: 10px auto;
-    width: 600px;
-    font-size: 12px;
-    .tasks-count{
-      flex: 1;
-      padding: 10px;
-      span{
-        color: #fff;
-        padding: 1px 5px;
-        font-size: 10px;
-        border-radius: 4px;
-        font-weight: bold;
-        background-color: #e91e63;
-      }
-    }
-    .tasks-completed{
-      padding: 10px;
-      span{
-        color: #fff;
-        padding: 1px 5px;
-        font-size: 10px;
-        background-color: #03a8f4;
-      }
-    }
-  
-  }
   /*Frame work*/
   .clearfix {
     clear: both;
