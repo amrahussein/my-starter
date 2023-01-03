@@ -49,13 +49,13 @@ document.addEventListener('DOMContentLoaded', () => {
       let html = await response.text();
       root.innerHTML = html;
       try {
+        await import('./features/currency-converter/style.scss');
+        await import('./features/currency-converter/main');
       } catch (error) {
         console.error(
           'index.html, style.scss, main.js files should be provided. ',
           error,
         );
-        await import('./features/currency-converter/style.scss');
-        await import('./features/currency-converter/main');
       }
     },
     '/unit-converter': async () => {
