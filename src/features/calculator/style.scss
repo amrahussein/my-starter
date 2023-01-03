@@ -1,10 +1,6 @@
 @import 'variables';
 body {
-  background-image: linear-gradient(
-    to bottom right,
-    them-colors(primary),
-    them-colors(secondary)
-  );
+  background-color: them-colors(primary);
 }
 .bt-number {
   background-color: them-colors(c-yellow);

@@ -21,12 +21,14 @@ let AllDigits = document.querySelector('.digits');
 AllDigits.onclick = function (e) {
   // console.log('hello here');
   let currentDigit = e.target.value;
-  if (currentDigit != '') {
-    document.getElementById('result').value += currentDigit;
-    console.log('hello here');
-  } else {
-    document.getElementById('result').value = '';
-  }
+  document.getElementById('result').value += currentDigit;
+
+  // if (currentDigit != '') {
+  //   document.getElementById('result').value += currentDigit;
+  //   console.log('hello here');
+  // } else {
+  //   document.getElementById('result').value = '';
+  // }
 };
 
 //operation
@@ -34,7 +36,7 @@ let operation = () => {
   // console.log('Hello');
   let x = document.getElementById('result').value;
   let y = eval(x);
-  let result = (x = y);
+  let result = (document.getElementById('result').value = y);
   return result;
 };
 
