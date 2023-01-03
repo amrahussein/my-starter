@@ -8,6 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
       // load landing page
       let response = await fetch('./index.html');
       let html = await response.text();
+
+      // append index html to the newly created html document
       root.innerHTML = html;
     },
     '/calculator': async () => {
@@ -15,8 +17,15 @@ document.addEventListener('DOMContentLoaded', () => {
       let response = await fetch('/features/calculator/index.html');
       let html = await response.text();
       root.innerHTML = html;
-      await import('./features/calculator/style.scss');
-      await import('./features/calculator/main');
+      try {
+        await import('./features/calculator/style.scss');
+        await import('./features/calculator/main');
+      } catch (error) {
+        console.error(
+          'index.html, style.scss, main.js files should be provided. ',
+          error,
+        );
+      }
     },
 
     '/password-generator': async () => {
@@ -29,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
         await import('./features/password-generator/main');
       } catch (error) {
         console.error(
-          'Error happened during fetching a password-generator html: ',
+          'index.html, style.scss, main.js files should be provided. ',
           error,
         );
       }
@@ -39,16 +48,30 @@ document.addEventListener('DOMContentLoaded', () => {
       let response = await fetch('/features/currency-converter/index.html');
       let html = await response.text();
       root.innerHTML = html;
-      await import('./features/currency-converter/style.scss');
-      await import('./features/currency-converter/main');
+      try {
+      } catch (error) {
+        console.error(
+          'index.html, style.scss, main.js files should be provided. ',
+          error,
+        );
+        await import('./features/currency-converter/style.scss');
+        await import('./features/currency-converter/main');
+      }
     },
     '/unit-converter': async () => {
       // load unit-converter page
       let response = await fetch('/features/unit-converter/index.html');
       let html = await response.text();
       root.innerHTML = html;
-      await import('./features/unit-converter/style.scss');
-      await import('./features/unit-converter/main');
+      try {
+        await import('./features/unit-converter/style.scss');
+        await import('./features/unit-converter/main');
+      } catch (error) {
+        console.error(
+          'index.html, style.scss, main.js files should be provided. ',
+          error,
+        );
+      }
     },
   };
 
