@@ -87,11 +87,9 @@ document.addEventListener('DOMContentLoaded', () => {
     event.preventDefault();
     // get the clicked link's URL
     const clickedUrl = event.target.getAttribute('href');
-    console.log('clickedUrl: ', clickedUrl);
 
     // push the clicked URL to the browser history
     history.pushState({ clickedUrl }, '', clickedUrl);
-    console.log('window.history: ', history);
 
     // check if the routes object has a property with the key equal to the clickedUrl value
     if (routes.hasOwnProperty(clickedUrl)) {
@@ -100,13 +98,12 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
     // handle the case where there is no matching route
-    console.error('Page Not Found');
   }
 
   function handleCurrentUrlState() {
     // get the current URL
     const currentUrl = window.location.pathname;
-    console.log('currentUrl: ', currentUrl);
+
     // invoke the route handler for the current state URL
     // routes[currentUrl]();
     routes[currentUrl]();

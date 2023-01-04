@@ -74,20 +74,20 @@ function generatePassword(lower, upper, number, symbol, length) {
 function getRandomLower() {
   return String.fromCharCode(Math.floor(Math.random() * 26) + 97); // 97 start a , 26 for alpha
 }
-//console.log(getRandomLower());
+//
 
 function getRandomUpper() {
   return String.fromCharCode(Math.floor(Math.random() * 26) + 65); // 65 start from A
 }
-//console.log(getRandomUpper());
+//
 
 function getRandomNumber() {
   return String.fromCharCode(Math.floor(Math.random() * 10) + 48); // 10 > 0,9 // 48 start from 0
 }
-//console.log(getRandomNumber());
+//
 
 function getRandomSymbol() {
   const symbols = '!@#$&*-?=+/.';
   return symbols[Math.floor(Math.random() * symbols.length)];
 }
-//console.log(getRandomSymbol());
+//

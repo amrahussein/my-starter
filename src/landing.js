@@ -1,5 +1,5 @@
 // toggle menu
-console.log('landing');
+
 // toggle class on icon
 let myMenu = document.querySelector('.toggle-menu');
 let myLinks = document.querySelector('.links');
@@ -7,10 +7,9 @@ let myLinks = document.querySelector('.links');
 // myMenu.onclick = () => {
 //   this.classList.add("menu-active");
 // };
-// console.log(myMenu);
+//
 
 myMenu.onclick = function (e) {
-  console.log('hello');
   e.stopPropagation();
   // show the arrow when click (toggle => show and remove)
   this.classList.toggle('menu-active');

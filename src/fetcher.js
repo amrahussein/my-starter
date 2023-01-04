@@ -1,7 +1,5 @@
 export default async function fetchUrl(url, params = {}) {
-  console.log('url: ', url);
   const queryString = buildQueryParams(params);
-  console.log('queryString: ', queryString);
 
   // config for get req
   const config = {
@@ -13,9 +11,7 @@ export default async function fetchUrl(url, params = {}) {
     const response = await fetch(`${url}?${queryString}`, config);
     const jasoned = await response.json();
     return jasoned;
-  } catch (error) {
-    console.error('Error occured during fetching data: ', error);
-  }
+  } catch (error) {}
 }
 
 function buildQueryParams(obj) {

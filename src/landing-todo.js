@@ -6,9 +6,7 @@ let theInput = document.querySelector('.add-task input'), // here i add the resu
   noTaskMsg = document.querySelector('.no-tasks-message');
 
 if (window.localStorage.getItem('todo')) {
-  console.log('good');
 } else {
-  console.log('noo');
 }
 // focus on input field
 window.onload = function () {

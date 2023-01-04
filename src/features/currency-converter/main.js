@@ -33,7 +33,7 @@ to_Currecy.addEventListener('change', (event) => {
 // function for updating value
 let updateValue = (e) => {
   search_value = e.target.value;
-  // console.log("user input: ",  e.target.value);
+  //
 };
 
 search.addEventListener('input', updateValue);
@@ -55,7 +55,7 @@ convert.addEventListener('click', getresult);
 // display results after conversion
 let display = (currency) => {
   // currency i can say it's object "java script obj notation"
-  console.log(currency);
+
   //conversion_rates it's periorety have all currency of reates
 
   let from_rate = currency.conversion_rates[currency_from_inp];
