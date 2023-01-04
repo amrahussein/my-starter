@@ -1,0 +1,93 @@
+//dark mode
+.todo-container {
+  width: 600px;
+  margin: 30px auto 0;
+  background-color: #f6f6f6;
+  @media (max-width: 576px) {
+    width: 100%;
+  }
+  .add-task {
+    padding: 15px;
+    background-color: #009688;
+    position: relative;
+    display: flex;
+    gap: 10px;
+    input {
+      -webkit-box-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      background-color: #fff;
+
+      font-size: 20px;
+      &:focus {
+        outline: none;
+      }
+    }
+    button {
+      border: none;
+      border-radius: 7px;
+      background-color: #16c888;
+      color: #fff;
+    }
+  }
+  .tasks-content {
+    padding: 15px;
+    .no-tasks-message {
+      color: #777;
+      font-size: 15px;
+    }
+    > span {
+      display: flex;
+      background-color: #fff;
+      padding: 10px;
+      justify-content: space-between;
+      align-items: center;
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+
+    .task-box {
+      .delete {
+        background-color: #e114a6;
+        padding: 8px 17px;
+        color: #fff;
+        border-radius: 5px;
+        border: navajowhite;
+        font-size: 12px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      &.finished {
+        text-decoration: line-through;
+      }
+    }
+  }
+}
+
+/*Frame work*/
+.clearfix {
+  clear: both;
+}
+
+/*Stat Grid System*/
+
+@media (max-width: 576px) {
+  /* Small Devises => lanscape phonse*/
+}
+
+@media (max-width: 768px) {
+  /* medium Devises => Tablets*/
+}
+
+@media (max-width: 992px) {
+  /* pc Devises*/
+}
+
+@media (max-width: 1200px) {
+  /* larg screens */
+}
+/*End Grid System*/

@@ -1,7 +1,8 @@
 // website << https://www.exchangerate-api.com/
 // include key & api for currency change
 
-const api = 'https://v6.exchangerate-api.com/v6/b2ac3c3fad8d03eae7a5da2e/latest/USD';
+const api =
+  'https://v6.exchangerate-api.com/v6/b2ac3c3fad8d03eae7a5da2e/latest/USD';
 
 // for selecting different controls
 let from_Currecy = document.querySelector('.from');
