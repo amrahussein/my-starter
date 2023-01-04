@@ -1,16 +1,16 @@
  @import './../../sass/variables';
 body {
-  background-color: them-colors(primary);
+  background-color: theme-colors(primary);
 }
 .bt-number {
-  background-color: them-colors(c-yellow);
+  background-color: theme-colors(c-yellow);
 }
 .container {
   width: 400px;
   padding: 20px;
   border-radius: 10px;
   margin: 8% auto;
-  box-shadow: 0 0 30px them-colors(c-black);
+  box-shadow: 0 0 30px theme-colors(c-black);
   position: relative;
   @media (max-width: 576px) {
     width: auto;
@@ -63,8 +63,8 @@ body {
         cursor: pointer;
         transition: all 200ms ease;
         margin-bottom: 10px;
-        background-color: them-colors(c-gray2);
-        color: them-colors(c-white);
+        background-color: theme-colors(c-gray2);
+        color: theme-colors(c-white);
         &:hover {
           transform: scale(1.1);
         }
@@ -86,7 +86,7 @@ body {
       gap: 20px;
       grid-template-columns: repeat(4, 1fr);
       .bt-oprator {
-        background-color: them-colors(c-green);
+        background-color: theme-colors(c-green);
       }
     }
     .digits input[type='button'],
@@ -105,4 +105,8 @@ body {
       }
     }
   }
+}
+footer{
+  text-align: center;
+  color: #ddd;
 }

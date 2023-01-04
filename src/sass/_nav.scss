@@ -1,9 +1,6 @@
 #app {
-  .container {
-    display: flex;
-    align-items: center;
+  .container-nav {
     background: #110b0b;
-    justify-content: space-between;
     @media (max-width: 768px) {
       padding: 15px 20px;
     }

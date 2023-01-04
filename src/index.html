@@ -10,8 +10,9 @@
   </head>
   <body>
     <div id="app">
-      <section class="container">
-        <a href="index.html"
+      <section class="container-nav">
+        <div class="container flex">
+          <a href="index.html"
           ><div class="logo">My <span class="lo-go">Starter</span></div></a
         >
         <nav>
@@ -35,44 +36,54 @@
             <span></span>
           </button>
         </nav>
+        </div>
+
       </section>
         <!-- To Do Container -->
         <div class="todo-container">
-          <h3></h3>
-          <div class="add-task">
-            <input type="text">
-            <button class="plus" onclick="setData()">Add Task</button>
+          
+         
+            <div class="add-task">
+              <input type="text">
+              <button class="plus" onclick="setData()">Add Task</button>
+            </div>
+          <div class="tasks-content">
+            <span class="no-tasks-message">no Tasks To Show</span>
+            </span>
+            </span>
           </div>
-        <div class="tasks-content">
-          <span class="no-tasks-message">no Tasks To Show</span>
-          </span>
-          </span>
-        </div>
+        
       </div>
 
       <!-- Weather Section -->
-      <section id="weather">
-
-        <!-- Weather Form -->
-          <form id="weatherInput">
-            
-            <input type="text" id="locationInput" name="location" placeholder="ex. Cairo" >
-
-            <input id="weather-submit" type="submit">
-
-          </form>
-        </section>
-
-        <!-- Weather Info -->
-        <section>
-          <p id="temperature"></p>
-          <p id="condition"></p>
-          <p id="cityName">  <span id="region"></span></p>
-        </section>
+      <div class="container-weth">
+        <section id="weather">
+          <!-- Weather Form -->
+                   <form class="flex" id="weatherInput">
+                           
+                   <input type="text" id="locationInput" name="location" placeholder="ex. Cairo" >
+         
+                   </form>
+                 
+                
+                 </section>
+         
+                 <!-- Weather Info -->
+                 <section class="result flex">
+                   
+                  <div class="t">
+                    <p id="cityName">  <span id="region"></span></p>
+                    <p id="condition"></p>
+                    <p id="temperature"></p>
+                  </div>
+                  
+                 </section>
+      </div>
+    
         
     <script type="module" src="./main"></script>
     <script type="module" src="./landing.js"></script>
-    <!-- <script type="module" src="./landing-todos.js"></script>
-    <script type="module" src="./landing-weather.js"></script> -->
+    <script type="module" src="./landing-todos.js"></script>
+    <script type="module" src="./landing-weather.js"></script>
   </body>
 </html>
