@@ -1,12 +1,13 @@
 // website << https://www.exchangerate-api.com/
 // include key & api for currency change
-const my_key = 'b2ac3c3fad8d03eae7a5da2e';
-const api = `https://v6.exchangerate-api.com/v6/${my_key}/latest/USD`;
+
+const api = 'https://v6.exchangerate-api.com/v6/b2ac3c3fad8d03eae7a5da2e/latest/USD';
 
 // for selecting different controls
 let from_Currecy = document.querySelector('.from');
 let to_Currecy = document.querySelector('.to');
 let search = document.querySelector('.search');
+let on_Reset = document.querySelector('#reset');
 
 let convert = document.getElementById('convert');
 let final_value = document.querySelector('.final-value');
@@ -37,7 +38,7 @@ let updateValue = (e) => {
 search.addEventListener('input', updateValue);
 
 // function getresults
-let getresult = (e) => {
+let getresult = async (e) => {
   e.preventDefault();
 
   fetch(`${api}`)
@@ -65,8 +66,9 @@ let display = (currency) => {
 };
 
 // when user click on reset button
-let on_reset = () => {
+let handle_reset = () => {
   //window.location.reload();
   this.location.reload();
   document.getElementsByClassName('final-value').innerHTML = '';
 };
+on_Reset.addEventListener('click', handle_reset);
