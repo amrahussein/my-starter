@@ -47,7 +47,8 @@ hr {
   margin: auto;
   padding: 20px;
   border-radius: 8px;
-  background-color: rgb(21, 153, 153);
+  background-color: theme-colors(primary);
+  box-shadow: 0 0 30px theme-colors(c-black);
   color: white;
 }
 
@@ -191,17 +192,14 @@ option {
   font-size: 1.2rem;
   line-height: 1.5;
   width: 200px;
-
   user-select: none;
-
   color: white;
-  background-color: #0070ff;
+  background-color: theme-colors(secondary);
   border-color: #0070ff;
-
   border: 1px solid transparent;
   border-radius: 0.25rem;
   padding: 0.375rem 0.75rem;
-  /* transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out; */
+   transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out; 
 }
 
 .btn:hover,
@@ -211,8 +209,9 @@ option {
 }
 
 .btnrest:hover {
-  background-color: #ff020f;
-  border-color: #ff020f;
+  background-color: theme-colors(tertiary);
+  color: theme-colors(c-black);
+  border: none;
 }
 
 .m-2 {
@@ -266,4 +265,9 @@ h2 {
   .final-value {
     font-size: 40px;
   }
+}
+footer{
+  margin-top: 100px;
+  text-align: center;
+  color: #ddd;
 }

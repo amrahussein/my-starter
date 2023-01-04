@@ -1,6 +1,8 @@
 #app {
   .container-nav {
-    background: #110b0b;
+    background: theme-colors(primary);
+    box-shadow: 1px 0px 15px #777;
+
     @media (max-width: 768px) {
       padding: 15px 20px;
     }
@@ -33,7 +35,7 @@
         &:hover {
           border: 1px solid #fff;
           color: theme-colors(c-white);
-          background-color: theme-colors(c-purple);
+          background-color: theme-colors(secondary);
         }
       }
       li.active {

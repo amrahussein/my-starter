@@ -2,7 +2,7 @@
 .todo-container {
   width: 800px;
   margin: 30px auto 0;
-  background-color: #f6f6f6;
+  background-color:theme-colors(c-of-white) ;
   box-shadow: -1px -1px 8px #5bc0f8;
   @media (max-width: 576px) {
     width:360px;
@@ -13,7 +13,8 @@
   }
   .add-task {
     padding: 15px;
-    background-color: #009688;
+    background-color: theme-colors(primary);
+
     position: relative;
     display: flex;
     gap: 10px;
@@ -34,12 +35,18 @@
     button {
       border: none;
       border-radius: 7px;
-      background-color: #16c888;
-      color: #fff;
+      background-color: theme-colors(tertiary);
+      color:theme-colors(c-white);
+      font-weight: bold;
+      transition: 0.3s;
       @media (max-width: 576px) {
-        width:360px;
+
         font-size: 13px;
-       border-radius: 40%;
+        
+      }
+      &:hover{
+        transform: scale(1.1);
+        color: theme-colors(c-black);
       }
     }
   }
