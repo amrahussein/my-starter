@@ -9,6 +9,7 @@ let region = document.getElementById('region');
 let weatherInput = document.getElementById('weatherInput');
 let locationInput = document.getElementById('locationInput');
 
+// testing key
 const API_KEY = 'f8b96e7e027d43b3b9c10901230401';
 const BASE_API_URL = 'https://api.weatherapi.com/v1/current.json';
 // api key for open weather api

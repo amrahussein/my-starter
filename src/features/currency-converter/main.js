@@ -1,6 +1,7 @@
 // website << https://www.exchangerate-api.com/
 // include key & api for currency change
 
+// testing key
 const api =
   'https://v6.exchangerate-api.com/v6/b2ac3c3fad8d03eae7a5da2e/latest/USD';
 
