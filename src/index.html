@@ -6,9 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Starter</title>
     <link rel="stylesheet" href="./sass/style.scss" />
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Roboto:ital,wght@0,100;0,300;0,400;1,500&display=swap');
-    </style>
+ 
   </head>
   <body>
     <div id="app">
@@ -19,7 +17,7 @@
         <nav>
           <ul class="links" id="nav">
             <li class="nav-item" id="calculator">
-              <a href="/calculator">Calculator</a>
+              <a href="./calculator">Calculator</a>
             </li>
             <li class="nav-item" id="password-generator">
               <a href="/password-generator">Password Generator</a>
@@ -51,8 +49,30 @@
           </span>
         </div>
       </div>
+
+      <!-- Weather Section -->
+      <section id="weather">
+
+        <!-- Weather Form -->
+          <form id="weatherInput">
+            
+            <input type="text" id="locationInput" name="location" placeholder="ex. Cairo" >
+
+            <input id="weather-submit" type="submit">
+
+          </form>
+        </section>
+
+        <!-- Weather Info -->
+        <section>
+          <p id="temperature"></p>
+          <p id="condition"></p>
+          <p id="cityName">  <span id="region"></span></p>
+        </section>
+        
     <script type="module" src="./main"></script>
     <script type="module" src="./landing.js"></script>
-    <script type="module" src="./landing-todo.js"></script>
+    <!-- <script type="module" src="./landing-todos.js"></script> -->
+    <script type="module" src="./landing-weather.js"></script>
   </body>
 </html>
