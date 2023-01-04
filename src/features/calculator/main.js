@@ -1,35 +1,8 @@
-//
-// let digits = document.querySelector('.digits');
-// digits.addEventListener('click', (e) => {
-//
-//   let currentDigit = e.target.value;
-//   document.getElementById('result').value += currentDigit;
-
-// });
-
-/*
-  for (let i = 0; i > AllDigits.length; i++) {
-    if (AllDigits[i] != '') {
-      
-    }
-  }
-  return AllDigits[i];
-  */
-
-// clear input after sum any logic
-let AllDigits = document.querySelector('.digits');
-AllDigits.onclick = function (e) {
-  //
+let digits = document.querySelector('.digits');
+digits.addEventListener('click', (e) => {
   let currentDigit = e.target.value;
   document.getElementById('result').value += currentDigit;
-
-  // if (currentDigit != '') {
-  //   document.getElementById('result').value += currentDigit;
-  //
-  // } else {
-  //   document.getElementById('result').value = '';
-  // }
-};
+});
 
 //operation
 let operation = () => {
