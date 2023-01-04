@@ -1,3 +1,5 @@
+// load main style
+import './sass/style.scss';
 // selectors
 const root = document.documentElement;
 const navigation = document.getElementById('nav');
@@ -16,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // load calculator page
       let response = await fetch('/features/calculator/index.html');
       let html = await response.text();
+
       root.innerHTML = html;
       try {
         await import('./features/calculator/style.scss');
@@ -95,7 +98,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (routes.hasOwnProperty(clickedUrl)) {
       // invoke the route handler for the clicked URL
       routes[clickedUrl]();
-      return;
     }
     // handle the case where there is no matching route
   }
