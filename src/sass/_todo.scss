@@ -69,7 +69,7 @@
 
     .task-box {
       .delete {
-        background-color: #e114a6;
+         background-color: theme-colors(secondary);
         padding: 8px 17px;
         color: #fff;
         border-radius: 5px;
@@ -77,6 +77,10 @@
         font-size: 12px;
         font-weight: bold;
         cursor: pointer;
+        transition: 0.3s;
+        &:hover{
+          background-color: theme-colors(c-red);
+        }
       }
       &.finished {
         text-decoration: line-through;
