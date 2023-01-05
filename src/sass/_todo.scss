@@ -4,6 +4,10 @@
   margin: 30px auto 0;
   background-color:theme-colors(c-of-white) ;
   box-shadow: -1px -1px 8px #5bc0f8;
+  h2{
+    padding: 10px;
+    color: #626262;
+  }
   @media (max-width: 576px) {
     width:360px;
 
