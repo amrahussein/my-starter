@@ -27,7 +27,7 @@ theAddBtn.onclick = function (e) {
     // Create the main Span Text
     let text = document.createTextNode(theInput.value);
     // Create the Delete Delete Button
-    let delettext = document.createTextNode('delete');
+    let delettext = document.createTextNode('done');
     // add text to main span
     mainSpan.appendChild(text);
     // add class to mains span
@@ -35,7 +35,7 @@ theAddBtn.onclick = function (e) {
     // add text to delete Button
     deletbtn.appendChild(delettext);
     // add class to delete btn
-    deletbtn.className = 'delete';
+    deletbtn.className = 'done';
     // add delete button to main span
     mainSpan.appendChild(deletbtn);
     // Add the task to container
@@ -54,7 +54,7 @@ theAddBtn.onclick = function (e) {
 // }
 document.addEventListener('click', (e) => {
   // Delete Task
-  if (e.target.className == 'delete') {
+  if (e.target.className == 'done') {
     // remove current task
     e.target.parentNode.remove();
   }
