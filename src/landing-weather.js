@@ -1,14 +1,14 @@
 import fetchUrl from './fetcher';
 
 // SELECTORS
-let temperature = document.getElementById('temperature');
-let condition = document.getElementById('condition');
-let cityName = document.getElementById('cityName');
-let loading = document.getElementById('loading');
-let region = document.getElementById('region');
+const temperature = document.getElementById('temperature');
+const condition = document.getElementById('condition');
+const cityName = document.getElementById('cityName');
+const loading = document.getElementById('loading');
+const region = document.getElementById('region');
 
-let weatherInput = document.getElementById('weatherInput');
-let locationInput = document.getElementById('locationInput');
+const weatherInput = document.getElementById('weatherInput');
+const locationInput = document.getElementById('locationInput');
 
 // testing key
 const API_KEY = 'f8b96e7e027d43b3b9c10901230401';
@@ -18,14 +18,14 @@ const BASE_API_URL = 'https://api.weatherapi.com/v1/current.json';
 document.addEventListener('DOMContentLoaded', () => {
   const fetchWeatherInfo = async () => {
     // weather value defaulted to 'Cairo' if no input specified...
-    let locationFromUser = locationInput.value ? locationInput.value : null;
+    const locationFromUser = locationInput.value ? locationInput.value : null;
     const queryString = {
       key: API_KEY,
       q: locationFromUser ?? 'Cairo',
       aqi: 'no',
     };
 
-    console.log('queryString: ', queryString);
+    
     try {
       const response = await fetchUrl(BASE_API_URL, queryString);
       return {
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
         current: response.current,
       };
     } catch (error) {
-      console.error('Error occured during fetching url: ', error);
+      
     }
   };
 
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
       temperature.append(span);
       condition.innerText = current.condition.text;
     } catch (error) {
-      console.error(error);
+      
     } finally {
       loading.style.display = 'none';
     }
@@ -64,6 +64,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const handleWeather = (e) => {
     e.preventDefault();
     updateUI();
+    // reset user after submit
+    locationInput.value = ''
   };
 
   updateUI();
