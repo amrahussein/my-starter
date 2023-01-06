@@ -4,6 +4,7 @@ import fetchUrl from './fetcher';
 let temperature = document.getElementById('temperature');
 let condition = document.getElementById('condition');
 let cityName = document.getElementById('cityName');
+let loading = document.getElementById('loading');
 let region = document.getElementById('region');
 
 let weatherInput = document.getElementById('weatherInput');
@@ -16,36 +17,48 @@ const BASE_API_URL = 'https://api.weatherapi.com/v1/current.json';
 
 document.addEventListener('DOMContentLoaded', () => {
   const fetchWeatherInfo = async () => {
-    if (locationInput.value !== '') {
-      const queryString = {
-        key: API_KEY,
-        q: locationInput.value,
-        aqi: 'no',
-      };
+    // weather value defaulted to 'Cairo' if no input specified...
+    let locationFromUser = locationInput.value ? locationInput.value : null;
+    const queryString = {
+      key: API_KEY,
+      q: locationFromUser ?? 'Cairo',
+      aqi: 'no',
+    };
 
-      try {
-        const response = await fetchUrl(BASE_API_URL, queryString);
-        return {
-          location: response.location,
-          current: response.current,
-        };
-      } catch (error) {}
+    console.log('queryString: ', queryString);
+    try {
+      const response = await fetchUrl(BASE_API_URL, queryString);
+      return {
+        location: response.location,
+        current: response.current,
+      };
+    } catch (error) {
+      console.error('Error occured during fetching url: ', error);
     }
   };
 
   const updateUI = async () => {
-    const { location, current } = await fetchWeatherInfo();
+    try {
+      const { location, current } = await fetchWeatherInfo();
 
-    // render current location
-    cityName.innerText = location.name;
-    region.innerText = location.region;
+      // simulate a spinner, display none of spinner which is loading by default
+      loading.style.display = 'none';
 
-    // render current infos
-    const span = document.createElement('span');
-    span.innerText = ' ℃';
-    temperature.innerText = current.temp_c;
-    temperature.append(span);
-    condition.innerText = current.condition.text;
+      // render current location
+      cityName.innerText = location.name;
+      region.innerText = location.region;
+
+      // render current infos
+      const span = document.createElement('span');
+      span.innerText = ' ℃';
+      temperature.innerText = current.temp_c;
+      temperature.append(span);
+      condition.innerText = current.condition.text;
+    } catch (error) {
+      console.error(error);
+    } finally {
+      loading.style.display = 'none';
+    }
   };
 
   const handleWeather = (e) => {
@@ -53,5 +66,6 @@ document.addEventListener('DOMContentLoaded', () => {
     updateUI();
   };
 
+  updateUI();
   weatherInput.addEventListener('submit', handleWeather);
 });
