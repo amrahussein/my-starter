@@ -27,7 +27,11 @@ copyEl.addEventListener('click', () => {
   textarea.select();
   document.execCommand('copy');
   textarea.remove();
-  alert('Password copied');
+  // Swal.fire({
+  //   icon: 'success',
+  //   showConfirmButton: false,
+  //   timer: 1500,
+  // });
 });
 
 generate.addEventListener('click', () => {

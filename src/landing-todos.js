@@ -11,7 +11,8 @@ window.onload = function () {
 theAddBtn.onclick = function () {
   // if input is Empty
   if (theInput.value === '') {
-    alert('the input is empty');
+    // alert('the input is empty');
+    Swal.fire('the input is empty');
   } else {
     let noTaskMsg = document.querySelector('.no-tasks-message');
 
