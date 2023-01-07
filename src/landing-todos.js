@@ -2,24 +2,23 @@
 // set Up Var
 let theInput = document.querySelector('.add-task input'), // here i add the result
   theAddBtn = document.querySelector('.add-task .plus'), // the button
-  tasksContainer = document.querySelector('.tasks-content'),
-  noTaskMsg = document.querySelector('.no-tasks-message');
-
-if (window.localStorage.getItem('todo')) {
-} else {
-}
+  tasksContainer = document.querySelector('.tasks-content');
 // focus on input field
 window.onload = function () {
   theInput.focus();
 };
 // add new Task
-theAddBtn.onclick = function (e) {
+theAddBtn.onclick = function () {
   // if input is Empty
   if (theInput.value === '') {
     alert('the input is empty');
   } else {
-    // remove NO Tasks Message
-    noTaskMsg.remove();
+    let noTaskMsg = document.querySelector('.no-tasks-message');
+
+    if (document.body.contains(document.querySelector('.no-tasks-message'))) {
+      noTaskMsg.remove();
+    }
+
     // create main span element
     let mainSpan = document.createElement('span');
     //Create delete button
@@ -48,18 +47,32 @@ theAddBtn.onclick = function (e) {
   window.localStorage.setItem('todo', theInput.value);
 };
 
-// function getData() {
-//   var data = sessionStorage.getItem('todoInput'); //localStorage.getItem("userData");
-//   theInput.value = data;
-// }
 document.addEventListener('click', (e) => {
   // Delete Task
   if (e.target.className == 'done') {
     // remove current task
     e.target.parentNode.remove();
+
+    if (tasksContainer.childElementCount == 0) {
+      NoTaskShow();
+    }
   }
   // add highlight to finished task
   if (e.target.classList.contains('task-box')) {
     e.target.classList.toggle('finished');
   }
 });
+
+// function to create no tasks Message
+function NoTaskShow() {
+  // create message
+  let message = document.createElement('span');
+  // create the text message
+  let textMessage = document.createTextNode('No Tasks To Show');
+  // add the textmsg to message
+  message.appendChild(textMessage);
+  // add class to message span
+  message.className = 'no-tasks-message';
+  // Append the message span Element to The Task Container
+  tasksContainer.appendChild(message);
+}
