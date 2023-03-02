@@ -1,47 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="icon" href="./computer.png" />
-  </head>
-  <body>
-    <!-- HEADER -->
-    <header><h1 class="heading">Unit Converter</h1></header>
-    <div class="main">
-      <!-- THE UNIT INTENDED TO CONVERT FROM DROPDOWN LIST -->
-      <div class="units">
-        <label for="FromUnits">Convert from:</label>
-        <select name="FromUnits" id="FromUnits">
-          <option value="ConvertedFrom">---From---</option>
-          <option value="Meters">Meters</option>
-          <option value="Centimeters">Centimeters</option>
-          <option value="Kilometers">Kilometers</option>
-          <option value="Inches">Inches</option>
-        </select>
+<head>
+  <title>Document</title>
+</head>
+  <!-- HEADER -->
+  <header><h1 class="heading">Unit Converter</h1></header>
+  <div class="main">
+    <!-- THE UNIT INTENDED TO CONVERT FROM DROPDOWN LIST -->
+    <div class="units">
+      <label for="FromUnits">Convert from:</label>
+      <select name="FromUnits" id="FromUnits">
+        <option value="ConvertedFrom">---From---</option>
+        <option value="Meters">Meters</option>
+        <option value="Centimeters">Centimeters</option>
+        <option value="Kilometers">Kilometers</option>
+        <option value="Inches">Inches</option>
+      </select>
 
-        <!-- THE DESTINATION UNIT DROPDOWN LIST -->
-        <label for="ToUnits">Convert to:</label>
-        <select name="ToUnits" id="ToUnits">
-          <option value="ConvertedTo">---To---</option>
-          <option value="Meters">Meters</option>
-          <option value="Centimeters">Centimeters</option>
-          <option value="Kilometers">Kilometers</option>
-          <option value="Inches">Inches</option>
-        </select>
-        <!-- TEXT BOX -->
-        <div class="resul">
-          <input type="number" name="meter" id="given" />
+      <!-- THE DESTINATION UNIT DROPDOWN LIST -->
+      <label for="ToUnits">Convert to:</label>
+      <select name="ToUnits" id="ToUnits">
+        <option value="ConvertedTo">---To---</option>
+        <option value="Meters">Meters</option>
+        <option value="Centimeters">Centimeters</option>
+        <option value="Kilometers">Kilometers</option>
+        <option value="Inches">Inches</option>
+      </select>
+      <!-- TEXT BOX -->
+      <div class="resul">
+        <input type="number" name="meter" id="given" />
 
-          <button id="convert">Convert</button>
-        </div>
+        <button id="convert">Convert</button>
       </div>
     </div>
-    <footer>copyright © 2023</footer>
+  </div>
 
-    <!-- DISPLAY IN -->
-    <p id="res"></p>
-  </body>
-</html>
+  <!-- DISPLAY IN -->
+  <p id="res"></p>

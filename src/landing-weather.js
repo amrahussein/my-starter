@@ -25,15 +25,15 @@ document.addEventListener('DOMContentLoaded', () => {
       aqi: 'no',
     };
 
-    
     try {
       const response = await fetchUrl(BASE_API_URL, queryString);
+
       return {
         location: response.location,
         current: response.current,
       };
     } catch (error) {
-      
+      console.error(error.message);
     }
   };
 
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
       temperature.append(span);
       condition.innerText = current.condition.text;
     } catch (error) {
-      
+      console.error(error.message);
     } finally {
       loading.style.display = 'none';
     }
@@ -64,8 +64,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const handleWeather = (e) => {
     e.preventDefault();
     updateUI();
-    // reset user after submit
-    locationInput.value = ''
+
+    // reset user input after submit
+    locationInput.value = '';
   };
 
   updateUI();

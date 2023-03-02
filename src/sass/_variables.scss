@@ -19,8 +19,7 @@ $theme-colors: (
   c-gray2: #607d8b,
   c-black: #080808,
   c-white: #ffffff,
-  c-of-white:#e9e8e8
-
+  c-of-white: #e9e8e8,
 );
 
 @function theme-colors($key) {

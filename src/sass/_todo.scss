@@ -2,15 +2,14 @@
 .todo-container {
   width: 800px;
   margin: 30px auto 0;
-  background-color:theme-colors(c-of-white) ;
+  background-color: theme-colors(c-of-white);
   box-shadow: -1px -1px 8px #5bc0f8;
-  h2{
+  h2 {
     padding: 10px;
     color: #626262;
   }
   @media (max-width: 576px) {
-    width:360px;
-
+    width: 360px;
   }
   @media (max-width: 991px) {
     max-width: 100%;
@@ -40,15 +39,13 @@
       border: none;
       border-radius: 7px;
       background-color: theme-colors(tertiary);
-      color:theme-colors(c-white);
+      color: theme-colors(c-white);
       font-weight: bold;
       transition: 0.3s;
       @media (max-width: 576px) {
-
         font-size: 13px;
-        
       }
-      &:hover{
+      &:hover {
         transform: scale(1.1);
         color: theme-colors(c-black);
       }
@@ -73,7 +70,7 @@
 
     .task-box {
       .done {
-         background-color: theme-colors(secondary);
+        background-color: theme-colors(secondary);
         padding: 8px 17px;
         color: #fff;
         border-radius: 5px;
@@ -82,7 +79,7 @@
         font-weight: bold;
         cursor: pointer;
         transition: 0.3s;
-        &:hover{
+        &:hover {
           background-color: theme-colors(c-yellow);
           color: theme-colors(c-black);
         }

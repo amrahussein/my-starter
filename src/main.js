@@ -1,9 +1,13 @@
-// load main style
+// handle routing by razy loading pages
+
+// load the main style
 import './sass/style.scss';
-// selectors
-const root = document.documentElement;
+
+// Selectors
+const app = document.getElementById('app-container');
 const navigation = document.getElementById('nav');
-// Wait  HTML document to be completely parsed
+
+// Wait HTML document to parse
 document.addEventListener('DOMContentLoaded', () => {
   const routes = {
     '/': async () => {
@@ -12,14 +16,14 @@ document.addEventListener('DOMContentLoaded', () => {
       let html = await response.text();
 
       // append index html to the newly created html document
-      root.innerHTML = html;
+      app.innerHTML = html;
     },
     '/calculator': async () => {
       // load calculator page
       let response = await fetch('/features/calculator/index.html');
       let html = await response.text();
 
-      root.innerHTML = html;
+      app.innerHTML = html;
       try {
         await import('./features/calculator/style.scss');
         await import('./features/calculator/main');
@@ -35,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // load password-generator page
       let response = await fetch('/features/password-generator/index.html');
       let html = await response.text();
-      root.innerHTML = html;
+      app.innerHTML = html;
       try {
         await import('./features/password-generator/style.scss');
         await import('./features/password-generator/main');
@@ -50,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // load currency-converter page
       let response = await fetch('/features/currency-converter/index.html');
       let html = await response.text();
-      root.innerHTML = html;
+      app.innerHTML = html;
       try {
         await import('./features/currency-converter/style.scss');
         await import('./features/currency-converter/main');
@@ -65,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // load unit-converter page
       let response = await fetch('/features/unit-converter/index.html');
       let html = await response.text();
-      root.innerHTML = html;
+      app.innerHTML = html;
       try {
         await import('./features/unit-converter/style.scss');
         await import('./features/unit-converter/main');
@@ -89,23 +93,18 @@ document.addEventListener('DOMContentLoaded', () => {
   function handleNavigation(event) {
     event.preventDefault();
     // get the clicked link's URL
-    const clickedUrl = event.target.getAttribute('href');
+    let clickedUrl = event.target.getAttribute('href');
 
     // push the clicked URL to the browser history
     history.pushState({ clickedUrl }, '', clickedUrl);
 
-    // check if the routes object has a property with the key equal to the clickedUrl value
-    if (routes.hasOwnProperty(clickedUrl)) {
-      // invoke the route handler for the clicked URL
-      routes[clickedUrl]();
-    }
-    // handle the case where there is no matching route
+    // invoke the route handler for the clicked URL on matching route
+    Object.keys(routes).includes(clickedUrl) && routes[clickedUrl]();
   }
 
   function handleCurrentUrlState() {
     // get the current URL
     const currentUrl = window.location.pathname;
-
     // invoke the route handler for the current state URL
     // routes[currentUrl]();
     routes[currentUrl]();
