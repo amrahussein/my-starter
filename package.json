@@ -7,10 +7,11 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "format": "prettier --write \"**/*.{js,json,css,scss,md}\""
+    "format": "prettier --write \"**/*.{js,json,css,scss,md}\"",
+    "husky:init": "husky install"
   },
   "devDependencies": {
-    "husky": "^8.0.2",
+    "husky": "^8.0.0",
     "prettier": "2.8.1",
     "sass": "^1.57.1",
     "vite": "^4.0.0"
