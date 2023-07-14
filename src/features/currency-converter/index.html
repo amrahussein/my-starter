@@ -3,28 +3,28 @@
 </head>
 
 <!-- Currency Converter  -->
-<h1 class="heading">Currency Converter</h1>
+<!-- <h1 class="C_heading">Currency Converter</h1> -->
 <hr />
-<div class="container">
-  <div class="main">
+<div class="C_container">
+  <div class="C_main">
     <form id="reset">
-      <div class="form-group">
+      <div class="C_form-group">
         <label for="amount"> Amount to Convert : </label><br />
         <input
           type="number"
-          class="form-control search"
+          class="C_form-control search"
           placeholder="00.00"
           id="amount"
         />
       </div>
 
-      <div class="row">
-        <div class="col-sm-6">
-          <div class="input-group">
-            <div class="input-group-prepend">
-              <span class="input-group-text">From</span>
+      <div class="C_row">
+        <div class="C_col-sm-6">
+          <div class="C_input-group">
+            <div class="C_input-group-prepend">
+              <span class="C_input-group-text">From</span>
             </div>
-            <select class="form-control from" id="select-1">
+            <select class="C_form-control from" id="select-1">
               <option value="">Select One …</option>
               <option value="USD">USD</option>
               <option value="AED">AED</option>
@@ -82,12 +82,12 @@
           </div>
         </div>
 
-        <div class="col-sm-6">
-          <div class="input-group">
-            <div class="input-group-prepend">
-              <span class="input-group-text">To</span>
+        <div class="C_col-sm-6">
+          <div class="C_input-group">
+            <div class="C_input-group-prepend">
+              <span class="C_input-group-text">To</span>
             </div>
-            <select class="form-control to" id="select-2">
+            <select class="C_form-control to" id="select-2">
               <option value="">Select One …</option>
               <option value="USD">USD</option>
               <option value="AED">AED</option>
@@ -146,15 +146,15 @@
         </div>
       </div>
 
-      <div class="text-center">
+      <div class="C_text-center">
         <!-- convert button -->
-        <button class="btn m-2" id="convert" type="submit">Convert</button>
+        <button class="C_btn m-2" id="convert" type="submit">Convert</button>
 
         <!-- reset button -->
 
         <button
           type="reset"
-          class="btn btnrest m-2"
+          class="C_btn btnrest m-2"
           id="reset"
           onclick="on_reset()"
         >
@@ -164,11 +164,11 @@
     </form>
   </div>
 
-  <div id="final-amount" class="text-center">
+  <div id="final-amount" class="C_text-center">
     <!-- Display the converted amount -->
     <h2>
       Converted Amount :
-      <span class="final-value" style="color: rgb(73, 185, 88)"> </span>
+      <span class="C_final-value" style="color: rgb(73, 185, 88)"> </span>
     </h2>
   </div>
 </div>

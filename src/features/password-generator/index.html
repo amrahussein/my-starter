@@ -1,36 +1,36 @@
   <head>
     <title>password-generator</title>
   </head>
-  <body>
-    <div class="container">
+  <main class="P_center">
+    <div class="P_container">
       <h2>Password Generator</h2>
-      <div class="result-container">
+      <div class="P_result-container">
         <span id="result"></span>
-        <button class="btn-icon" id="copy">
-          <i class="fa-regular fa-copy"></i>
+        <button class="P_btn-icon" id="copy">
+          <i class="P_fa-regular fa-copy"></i>
         </button>
       </div>
-      <div class="settings">
-        <div class="setting">
+      <div class="P_settings">
+        <div class="P_setting">
           <label>Password length</label>
           <input type="number" id="length" min="4" max="20" value="8" />
         </div>
-        <div class="setting">
+        <div class="P_setting">
           <label>Include uppercase letters</label>
           <input type="checkbox" id="uppercase" checked />
         </div>
-        <div class="setting">
+        <div class="P_setting">
           <label>Include lowercase letters</label>
           <input type="checkbox" id="lowercase" checked />
         </div>
-        <div class="setting">
+        <div class="P_setting">
           <label>Include numbers</label>
           <input type="checkbox" id="numbers" checked />
         </div>
-        <div class="setting">
+        <div class="P_setting">
           <label>Include symbols</label>
           <input type="checkbox" id="symbols" />
         </div>
       </div>
-      <button class="btn btn-large" id="generate">Generate</button>
+      <button class="P_btn P_btn-large" id="generate">Generate</button>
     </div>

@@ -1,0 +1,42 @@
+<!-- To Do Container -->
+<div class="todo-container">
+    <h2>Keep Productive ..</h2>
+    <div class="add-task">
+      <input type="text" />
+      <button class="plus" onclick="setData()">Add Task</button>
+    </div>
+    <div class="tasks-content">
+      <!-- <span class="no-tasks-message">no Tasks To Show</span> -->
+      <span class="task-box">workout<button class="done" fdprocessedid="0bgj">Done</button></span>
+      <span class="task-box">english section<button class="done" fdprocessedid="0bgj">Done</button></span>
+      <span class="task-box">freelancing lecture<button class="done" fdprocessedid="0bgj">Done</button></span>
+      <span class="task-box">lap section<button class="done" fdprocessedid="0bgj">Done</button></span>
+    </div>
+  </div>
+  
+  <!-- Weather Section -->
+  <div class="container-weth">
+    <section id="weather">
+      <!-- Weather Form -->
+      <form class="flex" id="weatherInput">
+        <input
+          type="text"
+          id="locationInput"
+          name="location"
+          placeholder="Not Cairo? Specify another location ex. London"
+        />
+      </form>
+    </section>
+  
+    <!-- SPINNER on load -->
+    <div id="loading">loading...</div>
+  
+    <!-- Weather Info -->
+    <section class="result">
+      <div class="t flex">
+        <p id="cityName"><span id="region"></span></p>
+        <p id="condition"></p>
+        <p id="temperature"></p>
+      </div>
+    </section>
+  </div>

@@ -5,7 +5,8 @@
 ### Installation & Running
 
 ```js
-npm i && npm run dev
+npm install
+npm run dev
 ```
 
 ### Features
@@ -18,7 +19,25 @@ Whether you need to quickly check the weather, convert units, or keep track of y
 
 If you have any feedback or suggestions for improvement, please don't hesitate to let us know.
 
-The app is on early developing and it can be converted into a framework after deciding on the suitable features, to be ready for deployment.
+The app is on early developing and it can be converted into a framework after deciding on the suitable features
+
+---
+
+## File Structure
+
+Here's an overview of the main folders and files:
+
+- **src**
+
+  - **router**
+  - **page-loader**
+  - **features**
+  - **sass**
+  - **util**
+  - **landing**: `landing page`
+
+- **index.js**: `The entry point of the application`
+- **index.html**: `The main HTML file that serves as the template for the application`
 
 ---
 

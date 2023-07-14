@@ -1,44 +1,44 @@
 
-  <head>
+<head>
  
-    <title>Calculator</title>
-  </head>
-    <div class="container dark">
-      <form>
-        <div class="result">
-          <input type="text" id="result" />
-          <input
-            id="clear"
-            class="bt-operator"
-            type="button"
-            value="C"
-            onclick="clearScreen()"
-          />
-        </div>
-        <div class="digits">
-          <input id="7" class="bt-number" type="button" value="7" />
-          <input id="8" class="bt-number" type="button" value="8" />
-          <input id="9" class="bt-number" type="button" value="9" />
-          <input id="/" class="bt-operator" type="button" value="/" />
-          <input id="4" class="bt-number" type="button" value="4" />
-          <input id="5" class="bt-number" type="button" value="5" />
-          <input id="6" class="bt-number" type="button" value="6" />
-          <input id="-" class="bt-operator" type="button" value="-" />
-          <input id="1" class="bt-number" type="button" value="1" />
-          <input id="2" class="bt-number" type="button" value="2" />
-          <input id="3" class="bt-number" type="button" value="3" />
-          <input id="*" class="bt-operator" type="button" id="" value="*" />
-          <input id="0" class="bt-number" type="button" value="0" />
-          <input id="." class="bt-operator" type="button" value="." />
-          <input id="+" class="bt-operator" type="button" value="+" />
-          <button
-            class="bt-operator equal"
-            type="button"
-            value=""
-            onclick="operation('')"
-          >
-            =
-          </button>
-        </div>
-      </form>
-    </div>
+  <title>Calculator</title>
+</head>
+  <div class="C_container dark">
+    <form id="form">
+      <div class="result">
+        <input type="text" id="result" />
+        <input
+          id="clear"
+          class="bt-operator"
+          type="button"
+          value="C"
+          onclick="clearScreen()"
+        />
+      </div>
+      <div class="digits">
+        <input id="7" class="bt-number" type="button" value="7" />
+        <input id="8" class="bt-number" type="button" value="8" />
+        <input id="9" class="bt-number" type="button" value="9" />
+        <input id="/" class="bt-operator" type="button" value="/" />
+        <input id="4" class="bt-number" type="button" value="4" />
+        <input id="5" class="bt-number" type="button" value="5" />
+        <input id="6" class="bt-number" type="button" value="6" />
+        <input id="-" class="bt-operator" type="button" value="-" />
+        <input id="1" class="bt-number" type="button" value="1" />
+        <input id="2" class="bt-number" type="button" value="2" />
+        <input id="3" class="bt-number" type="button" value="3" />
+        <input id="*" class="bt-operator" type="button" id="" value="*" />
+        <input id="0" class="bt-number" type="button" value="0" />
+        <input id="." class="bt-operator" type="button" value="." />
+        <input id="+" class="bt-operator" type="button" value="+" />
+        <button
+          class="bt-operator equal"
+          type="button"
+          value=""
+          onclick="operation('')"
+        >
+          =
+        </button>
+      </div>
+    </form>
+  </div>

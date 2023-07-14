@@ -1,22 +1,29 @@
 @import './../../sass/variables';
 
-body {
-  background-color: theme-colors(primary);
-  color: #fff;
-  display: flex;
-  font-family: 'Muli', sans-serif;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-  min-height: 100vh;
+// body {
+//   background-color: theme-colors(primary);
+//   color: #fff;
+//   display: flex;
+//   font-family: 'Muli', sans-serif;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: center;
+//   padding: 10px;
+//   min-height: 100vh;
+// }
+.P_center {
+  display: grid;
+  place-items: center;
+  height: 100vh;
 }
 
 p {
   margin: 5px 0;
 }
 
-.container {
+.P_container {
+  // display: flex;
+  font-family: 'Muli', sans-serif;
   background-color: theme-colors(primary);
   box-shadow: 0 0 30px theme-colors(c-black);
   padding: 20px;
@@ -27,7 +34,7 @@ p {
     margin: 10px 0 20px;
     text-align: center;
   }
-  .result-container {
+  .P_result-container {
     background-color: rgb(250 250 250);
 
     border-radius: 17px;
@@ -46,7 +53,7 @@ p {
       word-wrap: break-word;
       max-width: calc(100% - 40px);
     }
-    .btn-icon {
+    .P_btn-icon {
       font-size: 20px;
       position: absolute;
       right: 5px;
@@ -63,15 +70,15 @@ p {
       }
     }
   }
-  .settings {
-    .setting {
+  .P_settings {
+    .P_setting {
       display: flex;
       justify-content: space-between;
       align-items: center;
       margin: 15px 0;
     }
   }
-  .btn {
+  .P_btn {
     border: none;
     border-radius: 20px;
     color: #fff;
@@ -84,15 +91,9 @@ p {
       background-color: theme-colors(tertiary);
       color: theme-colors(c-black);
     }
-    &.btn-large {
+    &.P_btn-large {
       display: block;
       width: 100%;
     }
   }
-}
-
-footer {
-  margin-top: 100px;
-  text-align: center;
-  color: #ddd;
 }

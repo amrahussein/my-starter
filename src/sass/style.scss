@@ -13,6 +13,10 @@ body {
   background-color: theme-colors(c-of-white);
 }
 
+#app-container {
+  background-color: theme-colors(primary);
+}
+
 footer {
   text-align: center;
   color: #656161;

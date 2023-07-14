@@ -3,13 +3,13 @@
   box-sizing: border-box;
 }
 
-body {
-  background-color: theme-colors(primary);
+// body {
+//   // background-color: theme-colors(primary);
 
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
+//   background-position: center;
+//   background-size: cover;
+//   background-repeat: no-repeat;
+// }
 
 .heading {
   font-family: 'Amiri', serif;
@@ -99,10 +99,4 @@ body {
   @media (max-width: 576px) {
     width: 100%;
   }
-}
-
-footer {
-  margin-top: 100px;
-  text-align: center;
-  color: #ddd;
 }
